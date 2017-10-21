@@ -6,21 +6,21 @@
     <text class="item">{{publisher}}</text>
     <text class="item">{{meta}}</text>
   </view>
- <block wx:if="{{isCollect}}">
+<!-- <block wx:if="{{isCollect}}">
     <image bindtap="cancelCollect" class="collect-btn" mode="aspectFit" src="../../images/icon/icon-love-cur.png"></image>
   </block>
   <block wx:else>
     <image bindtap="collectBook" class="collect-btn" mode="aspectFit" src="../../images/icon/icon-love.png"></image>
-  </block>
+  </block>-->
 </view>
 <view class="tab">
   <block wx:if="{{current==0}}">
     <view class="cur item" data-current="0" bindtap="changeSwiperPage">详情</view>
-    <view class="item" data-current="1" bindtap="changeSwiperPage">评论</view>
+    <view class="item" data-current="1" bindtap="changeSwiperPage">目录</view>
   </block>
   <block wx:else>
     <view class=" item" data-current="0" bindtap="changeSwiperPage">详情</view>
-    <view class="item cur" data-current="1" bindtap="changeSwiperPage">评论</view>
+    <view class="item cur" data-current="1" bindtap="changeSwiperPage">目录</view>
   </block>
 </view>
 <swiper class="swiper-content" style="height:{{swiperHeight}}px;" current="{{current}}" bindchange="swiperChange">
@@ -45,16 +45,23 @@
             <view class="lib-item"></view>
             <view class="lib-item"></view>-->
           </view>
-       <!-- <view class="label">简介:</view>
+       <view class="label">概述:</view>
         <view class="intro">
-          <text>{{intro}}</text>
-        </view>-->
+          <text>{{summary}}</text>
+        </view>
       </view>
     </scroll-view>
   </swiper-item>
   <swiper-item>
     <view class="doing">
-      Comming Soon...
+    <block wx:if="{{catalog}}">
+     <scroll-view class="mes" scroll-y="true" style="height:{{swiperHeight}}px" lower-threshold="0">
+      <text>{{catalog}}</text>
+       </scroll-view>
+      </block>
+       <block wx:else>
+   <text>无可用目录</text>
+  </block>
     </view>
   </swiper-item>
 </swiper>
