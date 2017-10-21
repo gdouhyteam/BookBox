@@ -1,0 +1,28 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": false,
+		"postcss": true,
+		"minified": false
+	},
+	"compileType": "weapp",
+	"libVersion": "1.6.0",
+	"appid": "wx89dc3f48cb0982ec",
+	"projectname": "bookbox",
+	"miniprogramRoot": "./",
+	"condition": {
+		"weapp": {
+			"current": -1,
+			"list": []
+		},
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		}
+	}
+}
