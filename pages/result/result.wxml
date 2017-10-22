@@ -21,9 +21,9 @@
           <view class="name">{{item.name}}</view>
           <view class="author"> {{item.author}}</view>
           <view class="other-infos">
-            <view class="info-item overflow">{{item.public}}</view>
-            <view class="info-item">{{item.meta}}</view>
-           <!-- <view class="info-item">可借:{{item.available}}</view>-->
+            <view class=" .info-item overflow">{{item.public}}</view>
+            <view class=" .info-item overflow">{{item.meta}}</view>
+            <!-- <view class="info-item">可借:{{item.available}}</view>-->
           </view>
         </view>
       </navigator>

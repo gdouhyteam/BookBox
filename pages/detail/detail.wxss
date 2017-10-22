@@ -65,27 +65,32 @@
 }
 
 .swiper-content {
-  background: #fff;
+  background: #fafafa;
 }
 
 .swiper-content .mes .inner {
   padding: 40rpx 40rpx;
-  font-size: 28rpx;
+  font-size: 30rpx;
 }
 
 .swiper-content .mes .inner .label {
   font-weight: bold;
   margin: 10rpx 0;
-  color: #555;
+  color:  #4E5E7C;
 }
 
 .swiper-content .mes .lib-info {
   color: #777;
 }
 
-.swiper-content .mes .num, .swiper-content .mes .lib {
+.swiper-content .mes .num {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  padding: 10px;
+}
+
+.swiper-content .mes .lib {
   display: flex;
-   flex-direction: column ;
+  flex-direction: column ;
   padding: 10rpx 0;
 }
 
@@ -105,8 +110,8 @@
   color: #777;
 }
 .doing{
-  color: #b2b2b2;
-  text-align: center;
-  line-height: 100rpx;
-  font-size: 26rpx;
+  color: #564530;
+  text-align: center; 
+  line-height: 108rpx;
+  font-size: 30rpx;
 }

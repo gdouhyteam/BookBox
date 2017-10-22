@@ -102,14 +102,14 @@ Page({
     })
 
     wx.request({
-      url: 'http://127.0.0.1:3000/search?keywords=' + keyword +'&scway=&row=10&page=1',
+      url: app.globalData.host + '/search?keywords=' + keyword + '&scway=&row=10&page=1',
       success: function (res) {
         // 请求成功隐藏加载中的提示
         wx.hideToast()
 
         if (res.data.errcode === 0) {
           curBooksList = res.data.data;
-          
+
           that.setData({
             status: "success",
             booksList: res.data.data,
@@ -124,8 +124,8 @@ Page({
           })
         }
       },
-      complete:function(){
-        
+      complete: function () {
+
       }
     })
   },
@@ -151,9 +151,9 @@ Page({
     var page = parseInt(that.data.pageCurrent) + 1;
 
     wx.request({
-      url: 'http://127.0.0.1:3000/search?keywords=' + that.data.keyword + '&scway=&row=10&page='+page,
+      url: app.globalData.host + '/search?keywords=' + that.data.keyword + '&scway=&row=10&page=' + page,
       success: function (res) {
-        
+
         if (res.data.errcode == 0) {
           // 更新数据
           curBooksList = curBooksList.concat(res.data.data)
@@ -166,7 +166,7 @@ Page({
           console.log("没有结果")
         }
       },
-      complete:function(){
+      complete: function () {
         //启动上拉加载
         that.setData({
           dropLoadFunc: "dropLoad"
@@ -196,7 +196,7 @@ Page({
     })
   },
   // 分享搜索结果
-   onShareAppMessage: function () {
+  onShareAppMessage: function () {
     return {
       title: '海大书盒',
       path: '/pages/index/index'

@@ -46,5 +46,4 @@ Page({
       path: '/pages/index/index'
     }
   }
-
 })

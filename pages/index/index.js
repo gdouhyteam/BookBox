@@ -55,7 +55,7 @@ Page({
     })
 
 wx.request({
-  url: 'http://127.0.0.1:3000/search?keywords='+keyword,
+  url: app.globalData.host + '/search?keywords='+keyword,
       success: function (res) {
         wx.hideToast()
         app.globalData.searchResult = res.data;
@@ -108,6 +108,4 @@ wx.request({
       path: '/pages/index/index'
     }
   }
-
-
 })

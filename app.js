@@ -1,8 +1,6 @@
 //app.js
 //var AV = require('utils/av-weapp-min.js');
 //var hotapp = require('utils/hotapp.js');
-var host = "http://127.0.0.1:3000"
-//var development = "127.0.0.1:3000";
 // AV.init({
 //   //appId: 'gP7vju3g5dXbQyHXbLlKX4v5-gzGzoHsz',
 //   appId:'',
@@ -49,6 +47,7 @@ App({
   },
   globalData: {
     user: null,
-    searchRsult: null
+    searchRsult: null,
+    host: "http://192.168.2.150:3000"
   }
 })

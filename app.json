@@ -33,7 +33,7 @@
       },
       {
         "pagePath": "pages/collect/collect",
-        "text": "搜藏",
+        "text": "收藏",
         "iconPath": "images/icon/icon-collect.png",
         "selectedIconPath": "images/icon/icon-collect-cur.png"
       },

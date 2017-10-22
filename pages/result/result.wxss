@@ -14,13 +14,11 @@
   position: absolute;
   top: 18rpx;
   left: 20rpx;
-
 }
 .icon-cancel{
   position: absolute;
   top: 0rpx;
   right: 0rpx;
-
   padding: 15rpx 20rpx 15rpx 10rpx;
 }
 .search-inp{
@@ -53,6 +51,7 @@
   background: #f9fbfe;
 }
 .list-content{
+  background: #fafafa;
   padding: 0 20rpx;
 }
 .bookitem{
@@ -64,28 +63,29 @@
   box-shadow: 0 0 20rpx #eee; 
 }
 .bookitem .name{
-  font-size: 34rpx;
+  font-size: 40rpx;
+  word-wrap:break-word;
+  color: #4E5E7C;
   padding-bottom: 10rpx;
 }
 .bookitem .author{
-  font-size: 28rpx;
+  font-size: 33rpx;
+  color: #A6B2C9;
   padding-bottom: 10rpx;
 }
 .bookitem .other-infos{
+  display: -webkit-flex; /* Safari */
   display: flex;
-  flex-direction: row;
-  font-size: 22rpx;
-  color: #b2b2b2;
+  flex-direction: column-reverse;
+  font-size: 20rpx;
+  color: #8690A4;
 }
 .bookitem .other-infos .info-item{
-  margin-right: 20rpx;
-  
+  overflow: hidden;/*超出部分隐藏*/
+  white-space: nowrap;/*不换行*/
+  text-overflow:ellipsis;/*超出部分文字以...显示*/
 }
 .bookitem .other-infos .overflow{
-  max-width: 300rpx;
-   overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }

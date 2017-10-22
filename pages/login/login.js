@@ -1,7 +1,6 @@
 var app = getApp();
 //var AV = require('../../utils/av-weapp-min.js');
 //var hotapp = require('../../utils/hotapp.js');
-var host = "http://127.0.0.1:3000";
 Page({
     data: {
         load: false
@@ -37,7 +36,7 @@ Page({
         })
 
         wx.request({
-          url: host+'/login',
+          url: app.globalData.host+'/login',
             data: {
               name: user,
                 pass: pwd
@@ -67,7 +66,7 @@ Page({
                         data: cookie
                     })
                     wx.request({
-                      url: 'http://127.0.0.1:3000/myinfo',
+                      url: app.globalData.host + '/myinfo',
                         data: { cookie: cookie },
                         method: 'GET',
                         success: function (res) {

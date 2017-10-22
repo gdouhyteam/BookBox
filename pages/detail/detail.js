@@ -2,7 +2,6 @@
 //var AV = require('../../utils/av-weapp-min.js');
 //var Collection = AV.Object.extend('Collection');
 
-
 var app = getApp();
 Page({
   data: {
@@ -33,34 +32,34 @@ Page({
     var that = this;
 
     //获取收藏状态
-   // that.isCollect(param.bookid)
+    // that.isCollect(param.bookid)
 
     //获取图书信息
     wx.request({
       useProxy: true,
-      url: 'http://127.0.0.1:3000/detail/' + that.data.bookid,
+      url: app.globalData.host + '/detail/' + that.data.bookid,
       success: function (res) {
         if (res.data.errcode === 0) {
           console.log(res.data)
           that.setData({
             // intro: res.data.intro,
             available: res.data.available,
-             infoes: res.data.data,
-             isbn: res.data.isbn
-           })
+            infoes: res.data.data,
+            isbn: res.data.isbn
+          })
           wx.request({
             header: {
               "Content-Type": "json"
             },
-            url: 'https://api.douban.com/v2/book/isbn/' +res.data.isbn,
+            url: 'https://api.douban.com/v2/book/isbn/' + res.data.isbn,
             success: function (res) {
               var bookDefault = "https://img3.doubanio.com/f/shire/5522dd1f5b742d1e1394a17f44d590646b63871d/pics/book-default-large.gif";
               var bookImg = res.data.images.large;
               if (bookImg != bookDefault) {
                 that.setData({
                   catalog: res.data.catalog,
-                  image: res.data.images.large, 
-                  summary: res.data.summary 
+                  image: res.data.images.large,
+                  summary: res.data.summary
                 })
               }
             },
@@ -114,7 +113,6 @@ Page({
       that.setData({
         isCollect: false
       })
-
     }
   },
 
@@ -191,14 +189,11 @@ Page({
       }, function (error) {
         // 异常处理
       });
-
   },
-    onShareAppMessage: function () {
+  onShareAppMessage: function () {
     return {
       title: this.data.name,
-      path: '/pages/detail/detail?bookid='+this.data.bookid+'&publisher='+this.data.publisher+'&total='+this.data.total+'&available='+this.data.available
+      path: '/pages/detail/detail?bookid=' + this.data.bookid + '&publisher=' + this.data.publisher + '&total=' + this.data.total + '&available=' + this.data.available
     }
   }
-
-
 })

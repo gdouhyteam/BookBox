@@ -32,36 +32,36 @@
           <view class="num">
             <view>索书号：{{item.callno}}</view>
             <view>馆藏：{{item.library}}</view>
-             <view>具体位置：{{item.local}}</view>
-             <view>状态：{{item.state}}</view>
-             <view>类型：{{item.type}}</view>
-         </view>
+            <view>具体位置：{{item.local}}</view>
+            <view>状态：{{item.state}}</view>
+            <view>类型：{{item.type}}</view>
+          </view>
           
         </view>
         <view class="lib">
-            <view>总览：共 {{infoes.length}} 本      可借 {{available}} 本 </view>
+          <view>总览：共 {{infoes.length}} 本, 可借 {{available}} 本 </view>
             <!--<view class="lib-item available"></view>
             <view class="lib-item available"></view>
             <view class="lib-item"></view>
             <view class="lib-item"></view>-->
           </view>
-       <view class="label">概述:</view>
-        <view class="intro">
-          <text>{{summary}}</text>
+          <view class="label">概述:</view>
+          <view class="intro">
+            <text>{{summary}}</text>
+          </view>
         </view>
-      </view>
-    </scroll-view>
-  </swiper-item>
-  <swiper-item>
-    <view class="doing">
-    <block wx:if="{{catalog}}">
-     <scroll-view class="mes" scroll-y="true" style="height:{{swiperHeight}}px" lower-threshold="0">
-      <text>{{catalog}}</text>
-       </scroll-view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <view class="doing">
+        <block wx:if="{{catalog}}">
+         <scroll-view class="mes" scroll-y="true" style="height:{{swiperHeight}}px" lower-threshold="0">
+          <text>{{catalog}}</text>
+        </scroll-view>
       </block>
-       <block wx:else>
-   <text>无可用目录</text>
-  </block>
-    </view>
-  </swiper-item>
+      <block wx:else>
+       <text>无可用目录</text>
+     </block>
+   </view>
+ </swiper-item>
 </swiper>

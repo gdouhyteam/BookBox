@@ -21,7 +21,7 @@ Page({
     })
     if (user) {
       // 已经登录
-      that.data.isbind=true;
+      that.data.isbind = true;
       console.log("success login!");
     }
     else {
@@ -44,11 +44,11 @@ Page({
         that.setData({
           isbind: res.data
         })
-        console.log("isbind:"+res.data);
+        console.log("isbind:" + res.data);
         if (res.data) {
           var cookie = wx.getStorageSync('tshz_cookie')
           that.getBorrowData(cookie)
-         // that.getExpiredData(cookie)
+          // that.getExpiredData(cookie)
         }
       }
     })
@@ -58,7 +58,7 @@ Page({
   getBorrowData: function (cookie) {
     var that = this;
     wx.request({
-      url: 'http://127.0.0.1:3000/query',
+      url: app.globalData.host + '/query',
       data: { cookie: cookie },
       method: 'GET',
       success: function (res) {
@@ -69,7 +69,7 @@ Page({
           var booksTotal = booksList.length;
           console.log("booklist" + booksList.length);
           console.log(res.data);
-          
+
           // for (var i = 0; i < booksTotal; i++) {
           //   var expireDate = booksList[i].expireDate.rawValue
           //   var borrowedDate = booksList[i].borrowedDate.rawValue
@@ -79,8 +79,8 @@ Page({
           that.setData({
             booksTotal: res.data.data.length,
             booksList: res.data.data,
-              warnTotal: '0',
-              warnList: null,
+            warnTotal: '0',
+            warnList: null,
           })
         } else {
           wx.showToast({
@@ -187,15 +187,15 @@ Page({
   reNew: function (event) {
     var cookie = wx.getStorageSync('tshz_cookie')
     console.log(cookie);
-     console.log(event.currentTarget.id);
-     var isbn = event.currentTarget.id;
-     var that = this;
+    console.log(event.currentTarget.id);
+    var isbn = event.currentTarget.id;
+    var that = this;
     wx.request({
-      url: 'http://127.0.0.1:3000/renew',
+      url: app.globalData.host + '/renew',
       data: {
-        isbn:isbn, 
-        cookie: cookie 
-        },
+        isbn: isbn,
+        cookie: cookie
+      },
       method: 'POST',
       success: function (res) {
         // success
