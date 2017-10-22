@@ -42,7 +42,7 @@ Page({
                 pass: pwd
             },
             header: { 
-              'X_WECHAT_SESSION': 'test_cookie' ,
+              'X_WECHAT_SESSION': user + pwd ,
               "Content-Type": "applciation/json"
               },
             method: 'POST',

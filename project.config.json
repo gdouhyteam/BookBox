@@ -9,7 +9,7 @@
 	"compileType": "weapp",
 	"libVersion": "1.6.0",
 	"appid": "wx89dc3f48cb0982ec",
-	"projectname": "bookbox",
+	"projectname": "bookbox_v2",
 	"miniprogramRoot": "./",
 	"condition": {
 		"weapp": {

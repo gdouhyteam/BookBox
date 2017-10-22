@@ -48,6 +48,6 @@ App({
   globalData: {
     user: null,
     searchRsult: null,
-    host: "http://192.168.2.150:3000"
+    host: "http://139.199.186.177:3000"
   }
 })
