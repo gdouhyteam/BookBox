@@ -48,6 +48,6 @@ App({
   globalData: {
     user: null,
     searchRsult: null,
-    host: "http://139.199.186.177:3000"
+    host: "http://gdoulib.free.ngrok.cc"
   }
 })
