@@ -66,6 +66,9 @@
 
 .swiper-content {
   background: #fafafa;
+  padding:0 20rpx;
+  border-radius:20rpx;
+  color:#555;
 }
 
 .swiper-content .mes .inner {
@@ -84,8 +87,12 @@
 }
 
 .swiper-content .mes .num {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  padding: 10px;
+  background:#fff;
+  border-radius:20rpx;
+  margin:20rpx 0;
+  padding:20rpx 40rpx;
+  color:#555;
+  box-shadow:0 0 20rpx #eee;
 }
 
 .swiper-content .mes .lib {
@@ -107,8 +114,14 @@
 }
 
 .swiper-content .mes .intro {
-  color: #777;
+  background:#fff;
+  border-radius:20rpx;
+  margin:20rpx 0;
+  padding:20rpx 40rpx;
+  color:#555;
+  box-shadow:0 0 20rpx #eee;
 }
+
 .doing{
   color: #564530;
   text-align: center; 

@@ -57,7 +57,7 @@ Page({
               var bookImg = res.data.images.large;
               if (bookImg != bookDefault) {
                 that.setData({
-                  catalog: res.data.catalog,
+                  catalog: res.data.catalog.split("\n"),
                   image: res.data.images.large,
                   summary: res.data.summary
                 })
