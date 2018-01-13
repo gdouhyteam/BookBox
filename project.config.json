@@ -4,23 +4,24 @@
 		"urlCheck": false,
 		"es6": false,
 		"postcss": true,
-		"minified": false
+		"minified": false,
+		"newFeature": true
 	},
-	"compileType": "weapp",
+	"compileType": "miniprogram",
 	"libVersion": "1.6.0",
 	"appid": "wx89dc3f48cb0982ec",
 	"projectname": "bookbox_v2",
 	"miniprogramRoot": "./",
 	"condition": {
-		"weapp": {
-			"current": -1,
-			"list": []
-		},
 		"search": {
 			"current": -1,
 			"list": []
 		},
 		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
 			"current": -1,
 			"list": []
 		}

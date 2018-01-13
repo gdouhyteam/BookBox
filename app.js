@@ -48,6 +48,7 @@ App({
   globalData: {
     user: null,
     searchRsult: null,
-    host: "http://139.199.186.177:3000"
+    host: "http://127.0.0.1:3000"
+    //host: "https://fb6a99d9.ngrok.io"
   }
 })

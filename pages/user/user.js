@@ -10,7 +10,7 @@ Page({
     current: 0
   },
 
-  //除次加载
+  //初次加载
   onLoad: function () {
     var that = this;
     const user = wx.getStorage({
@@ -84,7 +84,7 @@ Page({
           })
         } else {
           wx.showToast({
-            title: '数据加载失败',
+            title: '登录信息过期，请重新登录',
             icon: 'success',
             duration: 2000
           })
@@ -199,7 +199,7 @@ Page({
       method: 'POST',
       success: function (res) {
         // success
-        if (!(res.data.errcode === 0)) {
+        if (res.data.errcode === 0) {
           wx.redirectTo({
             url: "user"
           })
