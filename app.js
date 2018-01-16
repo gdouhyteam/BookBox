@@ -48,11 +48,7 @@ App({
   globalData: {
     user: null,
     searchRsult: null,
-<<<<<<< HEAD
-    host: "http://127.0.0.1:3000"
-    //host: "https://fb6a99d9.ngrok.io"
-=======
-    host: "http://gdoulib.free.ngrok.cc"
->>>>>>> 45454d187ea39c07049e53f79932a131535243f7
+    // host: "http://gdoulib.free.ngrok.cc"
+    host: "http://192.168.2.203"
   }
 })

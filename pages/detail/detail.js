@@ -1,4 +1,5 @@
-//var hotapp = require('../../utils/hotapp.js');
+////////////
+var hotapp = require('../../utils/hotapp-conf.js');
 //var AV = require('../../utils/av-weapp-min.js');
 //var Collection = AV.Object.extend('Collection');
 
